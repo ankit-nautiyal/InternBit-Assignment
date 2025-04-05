@@ -156,7 +156,7 @@ bookmark-manager/
 Feel free to fork this repository, submit issues, or create pull requests. Contributions are welcome!
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details (create one if needed).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
