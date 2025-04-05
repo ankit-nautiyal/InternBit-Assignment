@@ -139,6 +139,7 @@ bookmark-manager/
 │   └── bookmark.js      # Request handlers (Controller)
 ├── routes/
 │   └── bookmark.js      # API route definitions
+├── node_modules         #node modules 
 ├── .env                 # Environment variables (not committed)
 ├── .gitignore           # Git ignore file
 ├── index.js             # Main server entry point
