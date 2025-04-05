@@ -1,6 +1,4 @@
-Below is a detailed `README.md` file for your Bookmark Manager project, designed for GitHub. It includes instructions on how to run the project locally and steps to connect to Nhost PostgreSQL without exposing credentials. It’s written in a clear, professional, and beginner-friendly tone, suitable for a public repository.
 
----
 
 # Bookmark Manager Backend
 
