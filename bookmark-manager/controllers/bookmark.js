@@ -5,14 +5,15 @@ const BookmarkController = {
     async createBookmark(req, res) {
         const { title, url, category } = req.body;
         if (!title || !url || !category) {
-        return res.status(400).json({ error: 'Missing required fields' });
+            return res.status(400).json({ error: 'Missing required fields' });
         }
         try {
-        const id = await Bookmark.create({ title, url, category });
-        res.status(201).json({ id, message: 'Bookmark added' });
+            const id = await Bookmark.create({ title, url, category });
+            res.status(201).json({ id, message: 'Bookmark added' });
         } catch (err) {
         console.error(err);
-        res.status(500).json({ error: 'Database error' });
+            console.error('Controller Error:', err.stack); // Detailed logging
+            res.status(500).json({ error: 'Database error', details: err.message });
         }
     },
 
@@ -22,21 +23,22 @@ const BookmarkController = {
         res.json(bookmarks);
         } catch (err) {
         console.error(err);
-        res.status(500).json({ error: 'Database error' });
+        console.error('Controller Error:', err.stack); // Detailed logging
+        res.status(500).json({ error: 'Database error', details: err.message });
         }
     },
 
     async getBookmarksByCategory(req, res) {
         const { category } = req.query;
         if (!category) {
-        return res.status(400).json({ error: 'Category is required' });
+            return res.status(400).json({ error: 'Category is required' });
         }
         try {
-        const bookmarks = await Bookmark.getByCategory(category);
-        res.json(bookmarks);
+            const bookmarks = await Bookmark.getByCategory(category);
+            res.json(bookmarks);
         } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Database error' });
+            console.error('Controller Error:', err.stack); // Detailed logging
+            res.status(500).json({ error: 'Database error', details: err.message });
         }
     },
 
@@ -54,8 +56,8 @@ const BookmarkController = {
         const ids = await Bookmark.createBatch(bookmarks);
         res.status(201).json({ ids, message: 'Bookmarks added' });
         } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Database error' });
+            console.error('Controller Error:', err.stack); // Detailed logging
+            res.status(500).json({ error: 'Database error', details: err.message });
         }
     }
 };
