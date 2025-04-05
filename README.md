@@ -160,14 +160,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-### Notes for You
-- **Credentials**: I’ve avoided including any sample credentials, keeping it generic with placeholders.
-- **License**: If you want to add a `LICENSE` file, run `npm init -y` (if not already done) and add a simple MIT License text, or skip that section in the README.
-- **GitHub**: Replace `https://github.com/your-username/bookmark-manager.git` with your actual repo URL once you push it.
-
-To add this to your project:
-1. Create a file named `README.md` in the root directory.
-2. Copy-paste the content above.
-3. Adjust any paths or details (e.g., repo URL) as needed.
-
-Let me know if you want to tweak it further (e.g., add a deployment section or more details)!
